@@ -27,7 +27,7 @@ namespace SwinAdventure
             Location overworld = new Location(new string[] { "overworld", "main dimension" }, "overworld", "The main dimension of where the game begins. ");
             myplayer.Location = overworld;
 
-            Location nether = new Location(new string[] { "nether world", "hell", "lava world" }, "Nether", "The hot, dangerous, hell-like dimension surrounded with lava, fire, hostile mobs and unqiue structures an biomes.");
+            Location nether = new Location(new string[] { "nether world", "hell", "lava world", "nether"}, "Nether", "The hot, dangerous, hell-like dimension surrounded with lava, fire, hostile mobs and unqiue structures an biomes.");
 
             Location the_end = new Location(new string[] { "the end", "The End", "ender world", "space" }, "The End", "The dark, space-like dimension with many floating islands that are lived by endermen and the ultimate boss --- Ender Dragon.");
 
@@ -85,8 +85,12 @@ namespace SwinAdventure
             Item locationItem2 = new Item(new string[] { "combat", "tools", "totem" }, "Totem of Undying", "A totem that revives player once and apply beneficial effects to the player for a short period of time.");
             overworld.Inventory.Put(locationItem2);
 
-            
-            
+            Item locationItem3 = new Item(new string[] { "pearl" }, "Ender Pearl", "A pearl that teleports you when you throw it.");
+            the_end.Inventory.Put(locationItem3);
+
+            Item locationItem4 = new Item(new string[] { "blaze_rod", "rod" }, "Blaze Rod", "A blazing rod acquired from killing blaze, can be used to craft ender eye with ender pearl");
+            nether.Inventory.Put(locationItem4);
+
 
             Console.WriteLine(myplayer.Location.FullDescription);
 

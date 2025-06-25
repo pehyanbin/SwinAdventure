@@ -36,6 +36,11 @@ namespace SwinAdventure
             }
 
 
+            if (textlength == 1 && text[0].ToLower() == "look")
+            {
+                return p.Location.FullDescription;
+            }
+
             if (textlength != 3 && textlength != 5)
             {
                 return donnoHowToLook;
